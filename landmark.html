@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>校园地标（A-Frame）</title>
+  <script src="libs/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- ===== 环境：天空 + 草地 + 主路（贯穿校门→教学楼，形成整体布局） ===== -->
+    <a-sky color="#b3e5fc"></a-sky>
+    <a-plane rotation="-90 0 0" width="40" height="40" color="#66bb6a"></a-plane>
+    <a-plane rotation="-90 0 0" position="0 0.02 1" width="3" height="14" color="#8d6e63"></a-plane>
+
+    <!-- ===== 光照：环境光 + 平行光（太阳） ===== -->
+    <a-light type="ambient" color="#ffffff" intensity="0.7"></a-light>
+    <a-light type="directional" position="1 5 2" intensity="0.55" color="#fff8e1"></a-light>
+
+
+    <!-- ===== 相机初始位：位于校门外，正对校园中轴 ===== -->
+    <a-camera position="0 1.8 12.5"></a-camera>
+  </a-scene>
+</body>
+</html>
